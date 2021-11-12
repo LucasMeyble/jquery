@@ -20,6 +20,8 @@
 </head>
 <body>
 
+  <h1>teste</h1>
+
   <table id="filmes">
     <thead>
       <tr>
@@ -72,10 +74,28 @@
     </tbody>
   </table>
 
+  <div>
+    <input type="checkbox" name="a">
+    <span>Mary</span>
+  </div>
+  <div>
+    <input type="checkbox" name="b">
+    <span>lcm</span>
+  </div>
+  <div>
+    <input type="checkbox" name="c" checked="checked">
+    <span>Peter</span>
+  </div>
+
+
   <script type="text/javascript">
     $(document).ready(function(){
-      $("tbody tr:lt(3)").css("background", '#CCC')
+      $("tbody tr:odd").css("background", '#CCC');
     })
+
+    $(':header').css({color: "blue"});
+
+    $( "input:not(:checked) + span" ).css( "background-color", "yellow" );
   </script>
 </body>
 </html>
